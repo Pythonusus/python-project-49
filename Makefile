@@ -13,4 +13,7 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl
 
-.PHONY: install brain-games build publish package-install
+package-reinstall:
+	python3 -m pip install --user --force-reinstall dist/*.whl
+
+.PHONY: install brain-games build publish package-install package-reinstall
