@@ -35,6 +35,7 @@ def get_correct_answer(num):
 
 
 def play_game():
+    cgo.print_welcome_message()
     user_name = cgo.get_user_name()
     cgo.welcome_user(user_name)
     print_rules()

@@ -3,6 +3,10 @@
 import prompt
 
 
+def print_welcome_message():
+    print('Welcome to the Brain Games!')
+
+
 def get_user_name():
     return prompt.string('May I have your name? ')
 
