@@ -1,6 +1,11 @@
 """This module provides functions common to all brain games"""
 
+import random
+
 import prompt
+
+
+CORRECT_ANSWERS_TO_WIN = 3
 
 
 def print_welcome_message():
@@ -13,6 +18,29 @@ def get_user_name():
 
 def welcome_user(user_name):
     print(f'Hello, {user_name}!')
+
+
+def print_rules(rules_text):
+    print('rules_text')
+
+
+def get_random_int(min, max):
+    return random.randint(min, max)
+
+
+def get_question(*args):
+    question = 'Question: '
+    for arg in args:
+        question = f'{question}{arg} '
+
+
+def get_answer():
+    answer = input('Your answer: ')
+    return answer
+
+
+def is_correct_answer(answer, correct_answer):
+    return answer == correct_answer
 
 
 def print_win_game_text(user_name):
