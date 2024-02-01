@@ -21,7 +21,7 @@ def welcome_user(user_name):
 
 
 def print_rules(rules_text):
-    print('rules_text')
+    print(rules_text)
 
 
 def get_random_int(min, max):
@@ -32,6 +32,7 @@ def get_question(*args):
     question = 'Question: '
     for arg in args:
         question = f'{question}{arg} '
+    return question
 
 
 def get_answer():
