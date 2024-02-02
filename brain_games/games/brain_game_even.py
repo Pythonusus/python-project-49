@@ -1,5 +1,7 @@
 """This module provides all necessary functions for brain_even"""
 
+import random
+
 import brain_games.games.common_games_operations as cgo
 
 MIN_NUMBER = 0  # Minimal number to be used in the game
@@ -22,7 +24,7 @@ def play_game():
     cgo.print_rules(RULES_TEXT)
 
     for _ in range(cgo.CORRECT_ANSWERS_TO_WIN):
-        number = cgo.get_random_int(MIN_NUMBER, MAX_NUMBER)
+        number = random.randint(MIN_NUMBER, MAX_NUMBER)
         print(cgo.get_question(number))
 
         answer = cgo.get_answer()

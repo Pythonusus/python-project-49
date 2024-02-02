@@ -1,7 +1,5 @@
 """This module provides functions common to all brain games"""
 
-import random
-
 import prompt
 
 
@@ -22,10 +20,6 @@ def welcome_user(user_name):
 
 def print_rules(rules_text):
     print(rules_text)
-
-
-def get_random_int(min, max):
-    return random.randint(min, max)
 
 
 def get_question(*args):

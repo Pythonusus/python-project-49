@@ -1,6 +1,7 @@
 """This module provides all necessary functions for brain_gcd"""
 
 import math
+import random
 
 import brain_games.games.common_games_operations as cgo
 
@@ -20,8 +21,8 @@ def play_game():
     cgo.print_rules(RULES_TEXT)
 
     for _ in range(cgo.CORRECT_ANSWERS_TO_WIN):
-        number1 = cgo.get_random_int(MIN_NUMBER, MAX_NUMBER)
-        number2 = cgo.get_random_int(MIN_NUMBER, MAX_NUMBER)
+        number1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+        number2 = random.randint(MIN_NUMBER, MAX_NUMBER)
         print(cgo.get_question(number1, number2))
 
         answer = cgo.get_answer()
