@@ -1,5 +1,6 @@
 #!/usr/bin/env python3\
-"""This script starts brain-calc game
+"""
+This script starts brain-calc game
 
 Brain-calc is a game, where player needs to solve arithmetic problems.
 

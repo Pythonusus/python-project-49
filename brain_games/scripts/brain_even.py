@@ -1,5 +1,6 @@
 #!/usr/bin/env python3\
-"""This script starts brain-even game
+"""
+This script starts brain-even game
 
 Brain-even is a game, where player needs to define if number is even.
 
