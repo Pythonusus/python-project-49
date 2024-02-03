@@ -13,3 +13,7 @@ https://asciinema.org/a/55K0mxtFhFTSjqgE97SAhLUL9
 
 ### Brain-gcd asciinema demo
 https://asciinema.org/a/0NnMCerNVCakkNneviQMxfmo7
+
+
+### Brain-progression asciinema demo
+https://asciinema.org/a/fMcK6P91K13PsKN7kcOk5k63s
