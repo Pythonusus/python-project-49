@@ -26,7 +26,7 @@ def get_question(*args):
     question = 'Question: '
     for arg in args:
         question = f'{question}{arg} '
-    return question
+    return question.strip()
 
 
 def get_answer():
