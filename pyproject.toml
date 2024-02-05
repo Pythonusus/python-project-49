@@ -4,6 +4,11 @@ version = "0.1.0"
 description = "Provides some cool games to play in console."
 authors = ["Petr Malafeev <StandBy545@yandex.ru>"]
 readme = "README.md"
+repository = "https://github.com/Pythonusus/python-project-49"
+classifiers = [
+    "Topic :: Games/Entertainment",
+    "Environment :: Console"
+]
 packages = [
   { include = "brain_games" },
 ]
