@@ -3,6 +3,8 @@
 import random
 
 import brain_games.games.common_games_operations as cgo
+from brain_games.games.games_settings import CORRECT_ANSWERS_TO_WIN
+
 
 RULES_TEXT = 'What number is missing in the progression?'
 MIN_PROGRESSION_START = 0
@@ -44,7 +46,7 @@ def play_game():
     cgo.welcome_user(user_name)
     cgo.print_rules(RULES_TEXT)
 
-    for _ in range(cgo.CORRECT_ANSWERS_TO_WIN):
+    for _ in range(CORRECT_ANSWERS_TO_WIN):
         progression = generate_progression(
             min_start=MIN_PROGRESSION_START, max_start=MAX_PROGRESSION_START,
             min_diff=MIN_COMMON_DIFFERENCE, max_diff=MAX_COMMON_DIFFERENCE,

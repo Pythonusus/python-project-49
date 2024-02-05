@@ -3,9 +3,13 @@
 import random
 
 import brain_games.games.common_games_operations as cgo
+from brain_games.games.games_settings import (
+    MIN_NUMBER,
+    MAX_NUMBER,
+    CORRECT_ANSWERS_TO_WIN
+)
 
-MIN_NUMBER = 0  # Minimal number to be used in the game
-MAX_NUMBER = 100  # Maximum number to be used in the game
+
 RULES_TEXT = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
@@ -23,7 +27,7 @@ def play_game():
     cgo.welcome_user(user_name)
     cgo.print_rules(RULES_TEXT)
 
-    for _ in range(cgo.CORRECT_ANSWERS_TO_WIN):
+    for _ in range(CORRECT_ANSWERS_TO_WIN):
         number = random.randint(MIN_NUMBER, MAX_NUMBER)
         print(cgo.get_question(number))
 

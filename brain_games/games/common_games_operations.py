@@ -3,9 +3,6 @@
 import prompt
 
 
-CORRECT_ANSWERS_TO_WIN = 3
-
-
 def print_welcome_message():
     print('Welcome to the Brain Games!')
 

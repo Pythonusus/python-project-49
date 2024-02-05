@@ -4,9 +4,13 @@ import math
 import random
 
 import brain_games.games.common_games_operations as cgo
+from brain_games.games.games_settings import (
+    MIN_NUMBER,
+    MAX_NUMBER,
+    CORRECT_ANSWERS_TO_WIN
+)
 
-MIN_NUMBER = 0  # Minimal number to be used in the game
-MAX_NUMBER = 100  # Maximum number to be used in the game
+
 RULES_TEXT = 'Find the greatest common divisor of given numbers.'
 
 
@@ -20,7 +24,7 @@ def play_game():
     cgo.welcome_user(user_name)
     cgo.print_rules(RULES_TEXT)
 
-    for _ in range(cgo.CORRECT_ANSWERS_TO_WIN):
+    for _ in range(CORRECT_ANSWERS_TO_WIN):
         number1 = random.randint(MIN_NUMBER, MAX_NUMBER)
         number2 = random.randint(MIN_NUMBER, MAX_NUMBER)
         print(cgo.get_question(number1, number2))
