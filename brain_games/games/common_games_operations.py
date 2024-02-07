@@ -3,20 +3,11 @@
 import prompt
 
 
-def print_welcome_message():
+def get_username_and_welcome_user():
     print('Welcome to the Brain Games!')
-
-
-def get_user_name():
-    return prompt.string('May I have your name? ')
-
-
-def welcome_user(user_name):
+    user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!')
-
-
-def print_rules(rules_text):
-    print(rules_text)
+    return user_name
 
 
 def get_question(*args):

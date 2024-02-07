@@ -32,10 +32,8 @@ def get_progression_copy_with_hidden_element(progression, index):
 
 
 def play_game():
-    cgo.print_welcome_message()
-    user_name = cgo.get_user_name()
-    cgo.welcome_user(user_name)
-    cgo.print_rules(RULES_TEXT)
+    user_name = cgo.get_username_and_welcome_user()
+    print(RULES_TEXT)
 
     for _ in range(CORRECT_ANSWERS_TO_WIN):
         progression_start = random.randint(
