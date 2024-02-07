@@ -17,10 +17,6 @@ def is_even(num):
     return num % 2 == 0
 
 
-def get_correct_answer(num):
-    return 'yes' if is_even(num) else 'no'
-
-
 def play_game():
     user_name = cgo.get_username_and_welcome_user()
     print(RULES_TEXT)
@@ -30,7 +26,7 @@ def play_game():
         print(cgo.get_question(number))
 
         answer = cgo.get_answer()
-        correct_answer = get_correct_answer(number)
+        correct_answer = 'yes' if is_even(number) else 'no'
         if not cgo.is_correct_answer(answer, correct_answer):
             cgo.print_lose_game_text(answer, correct_answer, user_name)
             break
