@@ -15,21 +15,12 @@ MIN_PROGRESSON_LENGTH = 5
 MAX_PROGRESSON_LENGTH = 15
 
 
-def generate_progression(
-        min_start=0, max_start=10,
-        min_diff=1, max_diff=10,
-        min_len=5, max_len=15
-):
-
-    progression_start = random.randint(min_start, max_start)
-    progression_common_difference = random.randint(min_diff, max_diff)
-    progression_length = random.randint(min_len, max_len)
-
+def generate_progression(start=0, common_diff=1, length=10):
     progression = []
-    current_member = progression_start
-    for _ in range(progression_length):
+    current_member = start
+    for _ in range(length):
         progression.append(current_member)
-        current_member += progression_common_difference
+        current_member += common_diff
 
     return progression
 
@@ -47,10 +38,25 @@ def play_game():
     cgo.print_rules(RULES_TEXT)
 
     for _ in range(CORRECT_ANSWERS_TO_WIN):
+        progression_start = random.randint(
+            MIN_PROGRESSION_START,
+            MAX_PROGRESSION_START
+        )
+
+        progression_common_difference = random.randint(
+            MIN_COMMON_DIFFERENCE,
+            MAX_COMMON_DIFFERENCE
+        )
+
+        progression_length = random.randint(
+            MIN_PROGRESSON_LENGTH,
+            MAX_PROGRESSON_LENGTH
+        )
+
         progression = generate_progression(
-            min_start=MIN_PROGRESSION_START, max_start=MAX_PROGRESSION_START,
-            min_diff=MIN_COMMON_DIFFERENCE, max_diff=MAX_COMMON_DIFFERENCE,
-            min_len=MIN_PROGRESSON_LENGTH, max_len=MAX_PROGRESSON_LENGTH
+            progression_start,
+            progression_common_difference,
+            progression_length
         )
 
         hidden_element_index = random.randrange(len(progression))
