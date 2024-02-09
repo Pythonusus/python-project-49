@@ -6,6 +6,7 @@ brain-games:
 
 lint:
 	poetry run flake8 brain_games
+	poetry run pylint brain_games
 
 build:
 	poetry build
