@@ -5,7 +5,6 @@ import random
 import brain_games.games.common_games_operations as cgo
 from brain_games.games.games_settings import CORRECT_ANSWERS_TO_WIN
 
-
 RULES_TEXT = 'What number is missing in the progression?'
 MIN_PROGRESSION_START = 0
 MAX_PROGRESSION_START = 10
