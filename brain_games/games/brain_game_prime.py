@@ -36,10 +36,11 @@ def play_game():
 
         answer = cgo.get_answer()
         correct_answer = get_correct_answer(number)
+
         if not cgo.is_correct_answer(answer, correct_answer):
             cgo.print_lose_game_text(answer, correct_answer, user_name)
             break
-        else:
-            print('Correct!')
+        print('Correct!')
+
     else:
         cgo.print_win_game_text(user_name)
