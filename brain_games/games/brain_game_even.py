@@ -2,12 +2,8 @@
 
 import random
 
-import brain_games.games.common_games_operations as cgo
-from brain_games.games.games_settings import (
-    CORRECT_ANSWERS_TO_WIN,
-    MAX_NUMBER,
-    MIN_NUMBER,
-)
+from brain_games.games.common_games_operations import generate_question
+from brain_games.games.games_settings import MAX_NUMBER, MIN_NUMBER
 
 RULES_TEXT = 'Answer "yes" if the number is even, otherwise answer "no".'
 
@@ -20,21 +16,8 @@ def get_correct_answer(num):
     return 'yes' if is_even(num) else 'no'
 
 
-def play_game():
-    user_name = cgo.get_username_and_welcome_user()
-    print(RULES_TEXT)
-
-    for _ in range(CORRECT_ANSWERS_TO_WIN):
-        number = random.randint(MIN_NUMBER, MAX_NUMBER)
-        print(cgo.get_question(number))
-
-        answer = cgo.get_answer()
-        correct_answer = get_correct_answer(number)
-
-        if not cgo.is_correct_answer(answer, correct_answer):
-            cgo.print_lose_game_text(answer, correct_answer, user_name)
-            break
-        print('Correct!')
-
-    else:
-        cgo.print_win_game_text(user_name)
+def generate_game_round():
+    number = random.randint(MIN_NUMBER, MAX_NUMBER)
+    question = generate_question(number)
+    correct_answer = get_correct_answer(number)
+    return question, correct_answer
