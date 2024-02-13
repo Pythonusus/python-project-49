@@ -1,9 +1,7 @@
-"""
-This module provides constants that are used to edit brain games setting
+"""Constants that are used to edit brain games settings.
 
 Only common to all games constants are kept here.
 Specific constants are kept in the corresponding game modules.
-
 """
 
 MIN_NUMBER = 0  # Minimal number to be used in the game
