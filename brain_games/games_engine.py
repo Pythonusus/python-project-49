@@ -1,7 +1,8 @@
 """This module provides functions common to all brain games"""
 
 import prompt
-from brain_games.games.games_settings import CORRECT_ANSWERS_TO_WIN
+
+from brain_games.constants import CORRECT_ANSWERS_TO_WIN
 
 
 def get_username():

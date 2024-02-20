@@ -2,8 +2,8 @@
 
 import random
 
+from brain_games.constants import MAX_NUMBER, MIN_NUMBER
 from brain_games.games.common_games_operations import generate_question
-from brain_games.games.games_settings import MAX_NUMBER, MIN_NUMBER
 
 RULES_TEXT = 'Answer "yes" if the number is even, otherwise answer "no".'
 
