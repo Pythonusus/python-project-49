@@ -29,10 +29,6 @@ def get_progression_copy_with_hidden_element(progression, index):
     return new_progression
 
 
-def get_correct_answer(progression, hidden_element_index):
-    return str(progression[hidden_element_index])
-
-
 def generate_game_round():
     progression_start = random.randint(
         MIN_PROGRESSION_START,
@@ -65,6 +61,6 @@ def generate_game_round():
     )
 
     question = generate_question(*progression_with_hidden_element)
-    correct_answer = get_correct_answer(progression, hidden_element_index)
+    correct_answer = str(progression[hidden_element_index])
 
     return question, correct_answer
