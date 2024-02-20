@@ -2,8 +2,6 @@
 
 import random
 
-from brain_games.games.common_games_operations import generate_question
-
 RULES_TEXT = 'What number is missing in the progression?'
 MIN_PROGRESSION_START = 0
 MAX_PROGRESSION_START = 10
@@ -27,6 +25,13 @@ def get_progression_copy_with_hidden_element(progression, index):
     new_progression = progression.copy()
     new_progression[index] = '..'
     return new_progression
+
+
+def generate_question(*args):
+    question = 'Question: '
+    for arg in args:
+        question = f'{question}{arg} '
+    return question.strip()
 
 
 def generate_game_round():
