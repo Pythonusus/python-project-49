@@ -15,18 +15,10 @@ operators = {
 }
 
 
-def get_random_operator(dict):
-    return random.choice(list(dict.keys()))
-
-
-def get_correct_answer(num1, num2, operator):
-    return str(operators[operator](num1, num2))
-
-
 def generate_game_round():
     number1 = random.randint(MIN_NUMBER, MAX_NUMBER)
     number2 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    operator = get_random_operator(operators)
+    operator = random.choice(list(operators.keys()))
     question = generate_question(number1, operator, number2)
-    correct_answer = get_correct_answer(number1, number2, operator)
+    correct_answer = str(operators[operator](number1, number2))
     return question, correct_answer
