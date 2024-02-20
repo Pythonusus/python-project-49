@@ -12,12 +12,8 @@ def is_even(num):
     return num % 2 == 0
 
 
-def get_correct_answer(num):
-    return 'yes' if is_even(num) else 'no'
-
-
 def generate_game_round():
     number = random.randint(MIN_NUMBER, MAX_NUMBER)
     question = generate_question(number)
-    correct_answer = get_correct_answer(number)
+    correct_answer = 'yes' if is_even(number) else 'no'
     return question, correct_answer
