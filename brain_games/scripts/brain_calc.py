@@ -5,7 +5,7 @@ Brain-calc is a game, where player needs to solve arithmetic problems.
 """
 
 from brain_games.games import brain_game_calc
-from brain_games.games.games_engine import games_engine
+from brain_games.games_engine import games_engine
 
 
 def main():

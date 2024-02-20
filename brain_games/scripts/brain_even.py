@@ -5,7 +5,7 @@ Brain-even is a game, where player needs to define if number is even.
 """
 
 from brain_games.games import brain_game_even
-from brain_games.games.games_engine import games_engine
+from brain_games.games_engine import games_engine
 
 
 def main():
