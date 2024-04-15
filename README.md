@@ -19,9 +19,9 @@ poetry >= 1.2.0
 
 ### Quick start
 1. Clone GitHub repo: `git clone https://github.com/Pythonusus/python-project-49`
-2. Create virual environment and install dependencies.This comman should be executed in the root directory of the project: `git install`
+2. Create virual environment and install dependencies.This comman should be executed in the root directory of the project: `make install`
 3. Build project: `make build`
-4. Install project on user level (`home/<user-name>/.local/bin` for Linux users): `make install`
+4. Install project on user level (`home/<user-name>/.local/bin` for Linux users): `make package-install`
 5. Check `PATH` environmental variable. Path to the installation folder should be added to `PATH`.
 6. Brain-games are ready to play!
 
