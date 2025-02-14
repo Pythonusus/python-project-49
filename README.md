@@ -57,6 +57,6 @@ This project was built using these tools:
 
 | Tool                                                                        | Description                                             |
 |-----------------------------------------------------------------------------|---------------------------------------------------------|
-| [poetry](https://python-poetry.org/)                                        | "Python dependency management and packaging made easy"  |
-| [flake8](https://flake8.pycqa.org/)                                         | "Your tool for style guide enforcement" |
+| [uv](https://docs.astral.sh/uv/)                                        | "An extremely fast Python package and project manager, written in Rust"  |
+| [Ruff](https://beta.ruff.rs/)                                         | "An extremely fast Python linter and code formatter, written in Rust" |
 | [prompt](https://prompt.readthedocs.io/en/latest/)                          | "The prompt library provides functions that prompt for strings, numbers, and passwords." |
