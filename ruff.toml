@@ -16,3 +16,5 @@ exclude = [
 preview = true
 select = ["A", "E", "F", "W", "I", "C90", "RET"]
 
+[format]
+quote-style = "preserve"
